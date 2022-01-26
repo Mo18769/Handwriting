@@ -15,7 +15,6 @@ row = 0
 downward = "ßjgpy" #sets the letters wich should be moved under
 
 for letter in string:
-
     if letter == " ": #for spaces
         letter_image = cv.imread("letters/space.png")
      
@@ -24,8 +23,6 @@ for letter in string:
 
     else: #for lowercase letters
         letter_image = cv.imdecode(np.fromfile(f"letters/{letter}/lower/{randint(1, 3)}.png", dtype=np.uint8), cv.IMREAD_UNCHANGED) #loads image of character
-     
-
 
     #the png image can't be higher then 60px
     if letter in downward:
@@ -38,16 +35,10 @@ for letter in string:
         x_offset = 0
         row+=1
     
-    
     y_offset+= 80*row #sets the row
-    
-    
 
-
-    
     background[y_offset:y_offset+letter_image.shape[0], x_offset:x_offset+letter_image.shape[1]] = letter_image #sets the image in place
 
-    
     x_offset+=letter_image.shape[1] #expands the line
 
 

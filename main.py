@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 from random import randint
 
-background = cv.imread("background.png") #sets die background
+background = cv.imread("background.png") #sets the background
 
 
 string='Thanks for downloading!'.replace(".", "ა").replace('"', "ბ").replace('?', "გ").replace('<', "ე").replace('>', "ვ").replace(':', "ჰ").replace('/', "ჯ").replace('\\', "კ") # replaces ."?<>:/\ because Windows can't name files like this
